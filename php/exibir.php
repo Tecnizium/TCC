@@ -9,7 +9,7 @@ if ($id == "l") {
     $consulta = mysqli_query($conexao, "SELECT * FROM QUESTOES WHERE AREA = 'L' ") or die(mysqli_error($conexao));
 
     while ($linha = mysqli_fetch_array($consulta)) {
-        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["Resposta"]);
+        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["RESPOSTA"]);
         $imprimir = json_encode($questoes);
         $c++;
     }

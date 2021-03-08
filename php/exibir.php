@@ -21,9 +21,9 @@ if ($id == "h") {
     $consulta = mysqli_query($conexao, "SELECT * FROM QUESTOES WHERE AREA = 'H' ") or die(mysqli_error($conexao));
 
     while ($linha = mysqli_fetch_array($consulta)) {
-        $questoes = array($linha);
+        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["RESPOSTA"]);
         $imprimir = json_encode($questoes);
-        echo $imprimir;
+        $c++;
     }
 }
 
@@ -33,9 +33,9 @@ if ($id == "m") {
     $consulta = mysqli_query($conexao, "SELECT * FROM QUESTOES WHERE AREA = 'M' ") or die(mysqli_error($conexao));
 
     while ($linha = mysqli_fetch_array($consulta)) {
-        $questoes = array($linha);
+        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["RESPOSTA"]);
         $imprimir = json_encode($questoes);
-        echo $imprimir;
+        $c++;
     }
 }
 
@@ -45,9 +45,9 @@ if ($id == "n") {
     $consulta = mysqli_query($conexao, "SELECT * FROM QUESTOES WHERE AREA = 'N' ") or die(mysqli_error($conexao));
 
     while ($linha = mysqli_fetch_array($consulta)) {
-        $questoes = array($linha);
+        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["RESPOSTA"]);
         $imprimir = json_encode($questoes);
-        echo $imprimir;
+        $c++;
     }
 }
 
@@ -57,9 +57,9 @@ if ($id == "r") {
     $consulta = mysqli_query($conexao, "SELECT * FROM QUESTOES WHERE AREA = 'R' ") or die(mysqli_error($conexao));
 
     while ($linha = mysqli_fetch_array($consulta)) {
-        $questoes = array($linha);
+        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["RESPOSTA"]);
         $imprimir = json_encode($questoes);
-        echo $imprimir;
+        $c++;
     }
 }
 
@@ -68,9 +68,9 @@ if ($id == "g") {
     $consulta = mysqli_query($conexao, "SELECT * FROM QUESTOES ") or die(mysqli_error($conexao));
 
     while ($linha = mysqli_fetch_array($consulta)) {
-        $questoes = array($linha);
+        $questoes[$c] = array($linha["ENUNCIADO"],  $linha["A"], $linha["B"], $linha["C"], $linha["D"], $linha["E"], $linha["RESPOSTA"]);
         $imprimir = json_encode($questoes);
-        echo $imprimir;
+        $c++;
     }
 }
 
